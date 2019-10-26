@@ -37,6 +37,7 @@ void ofApp::draw(){
   for (i=0; i< 100; i++){
     ofSetColor(255, 255, 255, 255 / (i* 0.1));
     
+    //example
 //  for (i=0; i< 100; i++){
 //    ofPushMatrix();
 //    ofTranslate(400, i * 8);
@@ -48,17 +49,18 @@ void ofApp::draw(){
     
 //     this turns the whole word together
 //    ofRotateYDeg(i);
-    ofPushMatrix();
+    
     float j;
     for (j=0; j< 7; j++){
        // this turns each letter more and more
+      ofPushMatrix();
       ofTranslate(0, i);
       ofRotateYDeg(i);
        // this turns each letter mroe and more, a lot!
        // ofRotateYDeg(j);
        myWord[j].draw(300, (i));
+      ofPopMatrix();
     }
-    ofPopMatrix();
   }
 }
 
