@@ -28,13 +28,26 @@ void ofApp::draw(){
   int fontSize = 98;
   font.load("frabk.ttf", fontSize, true, true, true);
   vector <ofPath> myWord = font.getStringAsPoints(messageText);
-
+  float j;
+  for (j=0; j< 7; j++){
+    myWord[j].draw(300, 50);
+  }
+  
   float i;
-  for (i=0; i< 8; i++){
-    ofSetColor(255, 255, 255, 255 / i);
+  for (i=0; i< 100; i++){
+    ofSetColor(255, 255, 255, 255 / (i* 0.1));
     
-    // this turns the whole word together
-    // ofRotateYDeg(i);
+//  for (i=0; i< 100; i++){
+//    ofPushMatrix();
+//    ofTranslate(400, i * 8);
+//    ofRotateYDeg(i*10);
+//    ofNoFill();
+//    ofDrawCircle(0,0,50);
+//    ofPopMatrix();
+//  }
+    
+//     this turns the whole word together
+//    ofRotateYDeg(i);
     ofPushMatrix();
     float j;
     for (j=0; j< 7; j++){
