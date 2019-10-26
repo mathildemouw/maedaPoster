@@ -56,7 +56,7 @@ void ofApp::draw(){
       ofRotateYDeg(i);
        // this turns each letter mroe and more, a lot!
        // ofRotateYDeg(j);
-       myWord[j].draw(300, (i * fontSize));
+       myWord[j].draw(300, (i));
     }
     ofPopMatrix();
   }
