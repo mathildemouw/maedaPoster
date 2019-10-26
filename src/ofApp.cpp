@@ -44,6 +44,7 @@ void ofApp::draw(){
 //        ofRotateYDeg(i);
             float j;
                  for (j=0; j< 7; j++){
+                     ofRotateYDeg(i);
                      myWord[j].draw(300, (i * fontSize));
     //                 cout << myWord[i] << endl;
                 }
